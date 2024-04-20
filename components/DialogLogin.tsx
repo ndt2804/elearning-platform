@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "antd";
-import Image from "next/image";
-import logo from "@/assets/logo.png";
 import LoginPage from "./ModalLogin";
 import RegisterPage from "./ModalRegister";
 export default function ModalWithFormExample() {
@@ -17,34 +15,29 @@ export default function ModalWithFormExample() {
     setVisible(false);
     form.resetFields();
   };
-  const handleSignUpClick = () => {
-    setIsLoginForm(false); // Chuyển sang form đăng ký
+  const handleSwitchModal = () => {
+    setIsLoginForm(!isLoginForm);
   };
 
   return (
     <>
       <Button onClick={showModal}>Sign In</Button>
       <Modal
-        title={isLoginForm ? "Đăng nhập" : "Đăng ký"}
+        title={isLoginForm ? "Sign In" : "Sign Up"}
         open={visible}
         onOk={form.submit}
         onCancel={handleCancel}
         footer={null}
       >
-        {isLoginForm ? (
-          // Form đăng nhập
-          <LoginPage />
-        ) : (
-          // Form đăng ký
-          <RegisterPage />
-        )}
-        <div className="flex items-center justify-between mt-4">
+        {isLoginForm ? <LoginPage /> : <RegisterPage />}
+        <div className="flex items-center justify-between">
           <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
           <a
             className="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline"
-            href="register"
+            href="#"
+            onClick={handleSwitchModal}
           >
-            or sign up
+            {isLoginForm ? " or sign up" : " or sign in"}
           </a>
           <span className="w-1/5 border-b dark:border-gray-400 md:w-1/4"></span>
         </div>
