@@ -2,9 +2,13 @@
 
 import Image from "next/image";
 import logo from "@/assets/logo.png";
-import ModalWithFormExample from "./DialogLogin";
+import AvatarDropdown from "./ui/Avatar";
+import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
 export default function TheHeader() {
+  // const { data: session }: any = useSession();
+
   return (
     <div>
       <div className="container mx-auto scroll-smooth">
@@ -26,7 +30,33 @@ export default function TheHeader() {
 
           <div className="py-6">
             <div className="flex">
-              <ModalWithFormExample />
+              {/* {!session ? (
+                <>
+                  <Link href="/">
+                    <li>Login</li>
+                    <AvatarDropdown />
+                  </Link>
+                  <Link href="/">
+                    <li>Register</li>
+                    <ModalWithFormExample />
+                  </Link>
+                </>
+              ) : (
+                <>
+                  {session.user?.email}
+                  <li>
+                    <button
+                      onClick={() => {
+                        signOut();
+                      }}
+                      className="p-2 px-5 -mt-1 bg-blue-800 rounded-full"
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </>
+              )} */}
+              <AvatarDropdown />
             </div>
           </div>
         </div>
