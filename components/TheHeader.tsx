@@ -7,7 +7,7 @@ import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 
 export default function TheHeader() {
-  // const { data: session }: any = useSession();
+  const { data: session }: any = useSession();
 
   return (
     <div>
@@ -24,13 +24,14 @@ export default function TheHeader() {
                 width={100} // Chiều rộng (px)
                 height={100} // Chiều cao (px)
                 alt="Mô tả hình ảnh" // Văn bản thay thế cho hình ảnh
+                priority={false}
               />
             </a>
           </div>
 
           <div className="py-6">
             <div className="flex">
-              {/* {!session ? (
+              {!session ? (
                 <>
                   <Link href="/">
                     <li>Login</li>
@@ -38,7 +39,6 @@ export default function TheHeader() {
                   </Link>
                   <Link href="/">
                     <li>Register</li>
-                    <ModalWithFormExample />
                   </Link>
                 </>
               ) : (
@@ -55,7 +55,7 @@ export default function TheHeader() {
                     </button>
                   </li>
                 </>
-              )} */}
+              )}
               <AvatarDropdown />
             </div>
           </div>

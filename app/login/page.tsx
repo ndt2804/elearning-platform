@@ -1,8 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import openNotification from "@/components/ui/Notification";
 
 import Image from "next/image";
 import logo from "@/assets/logo.png";
@@ -10,7 +9,13 @@ import logo from "@/assets/logo.png";
 export default function LoginPage() {
   const router = useRouter();
   const [error, setError] = useState("");
+  const { data: session, status: sessionStatus } = useSession();
 
+  useEffect(() => {
+    if (sessionStatus === "authenticated") {
+      router.replace("/");
+    }
+  }, [sessionStatus, router]);
   const isValidEmail = (email: string) => {
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     return emailRegex.test(email);
@@ -32,34 +37,44 @@ export default function LoginPage() {
       email,
       password,
     });
+    console.log(res);
     if (res?.error) {
       setError("Invalid email or password");
-      if (res?.url) {
-        router.replace("/dashboard");
-      }
+      if (res?.url) router.replace("/");
     } else {
       setError("");
     }
   };
+
+  if (sessionStatus === "loading") {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div className="relative py-3 sm:max-w-xl sm:mx-auto">
       <div className="relative px-4 py-10 bg-white mx-8 md:mx-0  sm:p-10">
         <form onSubmit={handleSubmit}>
           <div className="max-w-md mx-auto">
             <div className="flex items-center space-x-5 justify-center">
-              <Image src={logo} width={100} height={100} alt="Mô tả hình ảnh" />
+              <Image
+                src={logo}
+                width={100}
+                height={100}
+                alt="Mô tả hình ảnh"
+                priority={false}
+              />
             </div>
             <div className="mt-5">
               <label
                 className="font-semibold text-sm text-gray-600 pb-1 block"
-                htmlFor="login"
+                htmlFor="email"
               >
                 E-mail
               </label>
               <input
                 className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
                 type="text"
-                id="login"
+                id="email"
               />
               <label
                 className="font-semibold text-sm text-gray-600 pb-1 block"
