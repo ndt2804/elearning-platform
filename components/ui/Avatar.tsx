@@ -1,18 +1,29 @@
 import React from "react";
-
+import Link from "next/link";
 import { Avatar, Menu, Dropdown } from "antd";
 import { UserOutlined } from "@ant-design/icons";
+import { signOut, useSession } from "next-auth/react";
 
 const AvatarDropdown = () => {
+  const { data: session }: any = useSession();
+
   const userMenu = (
     <Menu>
       <Menu.Item key="1">Profile</Menu.Item>
       <Menu.Item key="2">My Courses</Menu.Item>
       <Menu.Item key="3">Settings</Menu.Item>
       <Menu.Divider />
-      <Menu.Item key="3">Logout</Menu.Item>
+      <Menu.Item
+        key="3"
+        onClick={() => {
+          signOut();
+        }}
+      >
+        Logout
+      </Menu.Item>
     </Menu>
   );
+
   return (
     <div>
       <Dropdown overlay={userMenu} placement="bottomRight">

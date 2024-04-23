@@ -33,16 +33,25 @@ export default function TheHeader() {
             <div className="flex">
               {!session ? (
                 <>
-                  <Link href="/">
-                    <li>Login</li>
-                    <AvatarDropdown />
+                  <Link href="/login">
+                    <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg">
+                      <span className="relative px-10 py-2.5 bg-white rounded-md ">
+                        Login
+                      </span>
+                    </button>
                   </Link>
-                  <Link href="/">
-                    <li>Register</li>
+                  <Link href="/register">
+                    <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-slate-900 rounded-lg bg-amber-300">
+                      <span className="relative px-8 py-2.5 rounded-md bg-amber-300">
+                        Sign Up
+                      </span>
+                    </button>
                   </Link>
                 </>
               ) : (
                 <>
+                  <AvatarDropdown />
+
                   {session.user?.email}
                   <li>
                     <button
@@ -56,7 +65,6 @@ export default function TheHeader() {
                   </li>
                 </>
               )}
-              <AvatarDropdown />
             </div>
           </div>
         </div>
