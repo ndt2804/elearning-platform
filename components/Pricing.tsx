@@ -18,9 +18,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -35,9 +35,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -52,9 +52,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -87,9 +87,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-2xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -104,9 +104,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -121,9 +121,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -138,9 +138,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -170,9 +170,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -187,9 +187,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -204,9 +204,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -221,9 +221,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -238,9 +238,9 @@ export default function ThePricing() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     className="text-white text-xs bg-green-500 rounded-full mr-2 p-1"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>

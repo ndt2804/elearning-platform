@@ -44,7 +44,7 @@ export const authOptions: any = {
     }),
     // ...add more providers here
   ],
-  secret: "Xhasdfouasdofere545sf",
+
   callbacks: {
     async signIn({ user, account }: { user: AuthUser; account: Account }) {
       if (account?.provider == "credentials") {
@@ -57,6 +57,10 @@ export const authOptions: any = {
         return true;
       }
     },
+  },
+  secret: process.env.AUTH_SECRET,
+  session: {
+    strategy: "jwt",
   },
 };
 
