@@ -41,7 +41,7 @@ const CardCourse: React.FC = () => {
   return (
     <div className="flex ">
       {courses.map((course, index) => (
-        <div className="m-3">
+        <div className="m-3" key={course._id}>
           <Card
             key={course._id}
             style={{ width: 300, marginBottom: 20 }}

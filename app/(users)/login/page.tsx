@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-
 import Image from "next/image";
 import logo from "@/assets/logo.png";
 
@@ -37,7 +36,6 @@ export default function LoginPage() {
       email,
       password,
     });
-    console.log(res);
     if (res?.error) {
       setError("Invalid email or password");
       if (res?.url) router.replace("/");
@@ -110,7 +108,7 @@ export default function LoginPage() {
                 <button
                   className=" items-center justify-center py-2 p-3 rounded-sm "
                   onClick={() => {
-                    signIn("github");
+                    signIn("google");
                   }}
                 >
                   <svg
@@ -181,6 +179,9 @@ export default function LoginPage() {
                   </svg>
                 </button>
                 <button
+                  onClick={() => {
+                    signIn("github");
+                  }}
                   aria-label="Log in with GitHub"
                   className="p-3 rounded-sm"
                 >

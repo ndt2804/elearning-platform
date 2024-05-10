@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import { Account, User as AuthUser } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import User from "@/types/user";
@@ -37,30 +38,23 @@ export const authOptions: any = {
       clientId: process.env.GITHUB_ID ?? "",
       clientSecret: process.env.GITHUB_SECRET ?? "",
     }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
+    }),
     // ...add more providers here
   ],
+  secret: "Xhasdfouasdofere545sf",
   callbacks: {
     async signIn({ user, account }: { user: AuthUser; account: Account }) {
       if (account?.provider == "credentials") {
         return true;
       }
+      if (account?.provider == "google") {
+        return true;
+      }
       if (account?.provider == "github") {
-        await connectMongoDB();
-        try {
-          const existingUser = await User.findOne({ email: user.email });
-          if (!existingUser) {
-            const newUser = new User({
-              email: user.email,
-            });
-
-            await newUser.save();
-            return true;
-          }
-          return true;
-        } catch (err) {
-          console.log("Error saving user", err);
-          return false;
-        }
+        return true;
       }
     },
   },
