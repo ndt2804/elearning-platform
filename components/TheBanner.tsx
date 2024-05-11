@@ -1,26 +1,32 @@
 export default function TheBanner() {
   return (
     <>
-      <div className="p-6 py-12 bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-between">
-            <h2 className="text-center text-6xl tracking-tighter font-bold">
-              Up to
-              <br className="sm:hidden" />
-              50% Off
-            </h2>
-            <div className="space-x-2 text-center py-2 lg:py-0">
-              <span>Plus free shipping! Use code:</span>
-              <span className="font-bold text-lg">MAMBA</span>
-            </div>
-            <a
-              href="#"
-              rel="noreferrer noopener"
-              className="px-5 mt-4 lg:mt-0 py-3 rounded-md border block bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50 border-gray-400 dark:border-gray-600"
-            >
-              Shop Now
-            </a>
-          </div>
+      <div className="flex items-center max-md:flex-col bg-blue-500 text-white px-6 py-3.5 rounded font-[sans-serif]">
+        <p className="text-base flex-1">
+          Don't miss out on our amazing summer sale! Get up to 50% off on a wide
+          range of products. Make the most of your summer shopping.
+        </p>
+        <div className="max-md:mt-4">
+          <button
+            type="button"
+            className="bg-white text-blue-500 font-semibold py-2 px-4 rounded text-sm hover:bg-slate-100 mx-6"
+          >
+            Get Offer
+          </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-4 cursor-pointer fill-white inline-block"
+            viewBox="0 0 320.591 320.591"
+          >
+            <path
+              d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+              data-original="#000000"
+            />
+            <path
+              d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+              data-original="#000000"
+            />
+          </svg>
         </div>
       </div>
     </>
