@@ -36,12 +36,12 @@ export const authOptions: AuthOptions = {
       },
     }),
     GithubProvider({
-      clientId: process.env.githubID ?? "",
-      clientSecret: process.env.githubSecret ?? "",
+      clientId: process.env.GITHUB_ID ?? "",
+      clientSecret: process.env.GITHUB_SECRET ?? "",
     }),
     GoogleProvider({
-      clientId: process.env.googleID ?? "",
-      clientSecret: process.env.googleSecret ?? "",
+      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
     }),
     // ...add more providers here
   ],
@@ -59,7 +59,7 @@ export const authOptions: AuthOptions = {
   //     }
   //   },
   // },
-  secret: process.env.authSecret,
+  secret: process.env.AUTH_SECRET,
   session: {
     strategy: "jwt",
   },
