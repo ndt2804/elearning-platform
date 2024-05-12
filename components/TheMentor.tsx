@@ -5,8 +5,9 @@ export default function TheMentor() {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h1 className="text-2xl font-medium title-font mb-4 text-gray-900">
-              OUR TEAM
+              OUR TEAM MENTOR
             </h1>
+
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
               Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
               gentrify, subway tile poke farm-to-table. Franzen you probably
@@ -18,8 +19,8 @@ export default function TheMentor() {
               <div className="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
-                  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                  src="https://dummyimage.com/200x200"
+                  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-top mb-4 "
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-1.jpg"
                 />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">
@@ -35,9 +36,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -48,9 +49,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -61,9 +62,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -74,12 +75,13 @@ export default function TheMentor() {
                 </div>
               </div>
             </div>
+
             <div className="p-4 lg:w-1/4 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                  src="https://dummyimage.com/201x201"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-2.jpg"
                 />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">
@@ -95,9 +97,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -108,9 +110,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -121,9 +123,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -139,7 +141,7 @@ export default function TheMentor() {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                  src="https://dummyimage.com/202x202"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-3.jpg"
                 />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">
@@ -155,9 +157,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -168,9 +170,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -181,9 +183,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -199,7 +201,7 @@ export default function TheMentor() {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                  src="https://dummyimage.com/203x203"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/team/2/business-man.jpg"
                 />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">
@@ -215,9 +217,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -228,9 +230,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -241,9 +243,9 @@ export default function TheMentor() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >

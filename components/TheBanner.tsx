@@ -1,7 +1,7 @@
 export default function TheBanner() {
   return (
     <>
-      <div className="flex items-center max-md:flex-col bg-blue-500 text-white px-6 py-3.5 rounded font-[sans-serif]">
+      <div className="container flex items-center max-md:flex-col bg-blue-500 text-white px-6 py-3.5 rounded font-[sans-serif] my-4">
         <p className="text-base flex-1">
           Don't miss out on our amazing summer sale! Get up to 50% off on a wide
           range of products. Make the most of your summer shopping.

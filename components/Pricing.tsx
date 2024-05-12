@@ -1,13 +1,18 @@
 export default function ThePricing() {
   return (
-    <section className=" w-full bg-gradient-to-r from-gray-50 to-gray-100 flex items-center justify-center">
+    <section className=" w-full flex items-center justify-center">
       <div className="container px-4 md:px-6">
+        <h3 className="text-2xl font-bold text-center">
+          {" "}
+          Become a premium member now!
+        </h3>
+
         <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-3 md:gap-8">
           <div className="flex flex-col p-6 bg-white shadow-lg rounded-lg justify-between border border-gray-300">
             <div>
               <h3 className="text-2xl font-bold text-center">Basic</h3>
               <div className="mt-4 text-center text-zinc-600">
-                <span className="text-4xl font-bold">$29</span>/ month
+                <span className="text-4xl font-bold">$0</span>/ month
               </div>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
@@ -42,7 +47,7 @@ export default function ThePricing() {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  2GB Cloud Storage
+                  Only take free courses
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -59,7 +64,7 @@ export default function ThePricing() {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Basic Video Templates
+                  Join the Q&A community
                 </li>
               </ul>
             </div>
@@ -74,9 +79,9 @@ export default function ThePricing() {
               Popular
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-center">Pro</h3>
+              <h3 className="text-2xl font-bold text-center">Premium</h3>
               <div className="mt-4 text-center text-zinc-600">
-                <span className="text-4xl font-bold">$59</span>/ month
+                <span className="text-4xl font-bold">$5</span>/ month
               </div>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
@@ -111,7 +116,7 @@ export default function ThePricing() {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  10GB Cloud Storage
+                  Learn Pro courses
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -128,7 +133,7 @@ export default function ThePricing() {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Premium Video Templates
+                  Join the Q&A community
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -145,7 +150,7 @@ export default function ThePricing() {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Collaboration Tools
+                  Join class premium with mentor
                 </li>
               </ul>
             </div>
@@ -159,7 +164,7 @@ export default function ThePricing() {
             <div>
               <h3 className="text-2xl font-bold text-center">Enterprise</h3>
               <div className="mt-4 text-center text-zinc-600">
-                <span className="text-4xl font-bold">$99</span>/ month
+                <span className="text-4xl font-bold">$25</span>/ month
               </div>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
@@ -194,7 +199,7 @@ export default function ThePricing() {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Unlimited Cloud Storage
+                  Unlimited Course Pro
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -211,7 +216,7 @@ export default function ThePricing() {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Custom Video Templates
+                  Join the Q&A community
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -245,7 +250,7 @@ export default function ThePricing() {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Dedicated Support
+                  Join 1:1 with Mentor
                 </li>
               </ul>
             </div>

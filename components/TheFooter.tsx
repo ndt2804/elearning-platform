@@ -20,7 +20,7 @@ export default function TheFooter() {
                 </svg>
               </div>
               <span className="self-center text-2xl font-semibold">
-                Brand name
+                Owlearning
               </span>
             </a>
           </div>

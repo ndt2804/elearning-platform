@@ -9,8 +9,11 @@ import TheFooter from "@/components/TheFooter";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: " Elearning Platform",
+  title: "Owlearning | Platform",
   description: "Elearning Platform by Haneko",
+  icons: {
+    icon: ["/favicon.ico"],
+  },
 };
 
 export default async function RootLayout({
