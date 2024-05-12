@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import logo from "@/assets/logo.png";
+import logo from "@/public/assets/logo.png";
 
 export default function LoginPage() {
   const router = useRouter();

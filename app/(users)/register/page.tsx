@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { notification } from "antd";
 import Image from "next/image";
-import logo from "@/assets/logo.png";
+import logo from "@/public/assets/logo.png";
 import openNotification from "@/components/ui/Notification";
 
 export default function RegisterPage() {
