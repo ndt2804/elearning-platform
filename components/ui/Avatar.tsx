@@ -1,40 +1,57 @@
 import React from "react";
 import Link from "next/link";
-import { Avatar, Menu, Dropdown } from "antd";
-import { UserOutlined } from "@ant-design/icons";
+import { Avatar, Dropdown } from "antd";
 import { signOut, useSession } from "next-auth/react";
-
+import type { MenuProps } from "antd";
 const AvatarDropdown = () => {
   const { data: session }: any = useSession();
-
-  const userMenu = (
-    <Menu>
-      <Menu.Item key="1">Profile</Menu.Item>
-      <Menu.Item key="2">My Courses</Menu.Item>
-      <Menu.Item key="3">Settings</Menu.Item>
-      <Menu.Divider />
-      <Menu.Item
-        key="3"
-        onClick={() => {
-          signOut();
-        }}
-      >
-        Logout
-      </Menu.Item>
-    </Menu>
-  );
-
+  const items: MenuProps["items"] = [
+    {
+      key: "1",
+      label: <Link href={`/user/${session.user.name}`}>Profile</Link>,
+    },
+    {
+      key: "2",
+      label: <Link href="/courses">My Courses</Link>,
+    },
+    {
+      key: "3",
+      label: <Link href="/settings">Settings</Link>,
+    },
+    {
+      type: "divider",
+    },
+    {
+      key: "4",
+      label: (
+        <a
+          onClick={() => {
+            signOut();
+          }}
+        >
+          Logout
+        </a>
+      ),
+    },
+  ];
+  const username = session?.user?.name || "";
+  const firstLetter = username.charAt(0).toUpperCase();
   return (
     <div>
-      <Dropdown overlay={userMenu} placement="bottomRight">
+      <Dropdown menu={{ items }} trigger={["click"]} placement="bottomRight">
         <Avatar
-          size={64}
-          icon={<UserOutlined />}
-          style={{ cursor: "pointer" }}
-        />
+          size={48}
+          style={{
+            backgroundColor: session.user.image ? "transparent" : "#fde3cf",
+            color: session.user.image ? "inherit" : "#f56a00",
+            cursor: session.user.image ? "auto" : "pointer",
+          }}
+          src={session.user.image || undefined}
+        >
+          {session.user.image ? null : firstLetter}
+        </Avatar>
       </Dropdown>
     </div>
   );
 };
-
 export default AvatarDropdown;

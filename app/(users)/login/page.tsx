@@ -49,7 +49,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+    <div className="relative py-3 sm:max-w-xl sm:mx-auto min-h-screen">
       <div className="relative px-4 py-10 bg-white mx-8 md:mx-0  sm:p-10">
         <form onSubmit={handleSubmit}>
           <div className="max-w-md mx-auto">

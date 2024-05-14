@@ -1,11 +1,10 @@
-"use client";
 import bglanding from "@/public/assets/bg-landing.png";
 import Image from "next/image";
 
 export default function LandingPage() {
   return (
     <div>
-      <section className="container pt-4 overflow-hidden  md:pt-0 sm:pt-16 2xl:pt-16">
+      <section className="container pt-4 overflow-hidden md:pt-0 sm:pt-16 2xl:pt-16">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid items-center grid-cols-1 md:grid-cols-2">
             <div>
@@ -18,7 +17,6 @@ export default function LandingPage() {
                 guide you from zero to excellence. Please join me in creating a
                 turning point in your life
               </p>
-
               <p className="mt-4 text-xl text-gray-600 md:mt-8">
                 <span className="relative inline-block">
                   <span className="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300"></span>
@@ -35,7 +33,6 @@ export default function LandingPage() {
                 </a>
               </p>
             </div>
-
             <div className="relative">
               <img
                 className="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2"

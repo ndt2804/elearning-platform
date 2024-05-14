@@ -1,6 +1,6 @@
 export default function ThePricing() {
   return (
-    <section className=" w-full flex items-center justify-center">
+    <section className="w-full flex items-center justify-center">
       <div className="container px-4 md:px-6">
         <h3 className="text-2xl font-bold text-center">
           {" "}

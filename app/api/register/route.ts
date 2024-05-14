@@ -16,8 +16,8 @@ export const POST = async (request: any) => {
     email: email,
     username,
     password: hashedPassword,
+    image: null,
   });
-  console.log(newUser);
   try {
     await newUser.save();
     return new NextResponse("user is registered", { status: 200 });
