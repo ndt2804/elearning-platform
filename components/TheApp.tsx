@@ -70,7 +70,7 @@ export default function TheApp() {
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <Image
+            <img
               className="object-cover object-center rounded"
               alt="hero"
               src="https://mobikul.com/wp-content/uploads/2023/06/language-learning-app-header.png"
