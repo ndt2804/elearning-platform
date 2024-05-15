@@ -10,9 +10,9 @@ export default function TheHeader() {
   const { data: session }: any = useSession();
   console.log(session);
   return (
-    <header className="text-gray-600 body-font bg-gray-200 ">
+    <header className="text-gray-600 body-font bg-gray-200 border-b-2 ">
       <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <a
+        <Link
           aria-current="page"
           href="/"
           className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 router-link-active router-link-exact-active"
@@ -25,13 +25,23 @@ export default function TheHeader() {
             priority={false}
           />
           <span className="ml-3  text-2xl font-semibold">Owlearning</span>
-        </a>
+        </Link>
         <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900">Homepage </a>
-          <a className="mr-5 hover:text-gray-900">Courses</a>
-          <a className="mr-5 hover:text-gray-900">Mentor</a>
-          <a className="mr-5 hover:text-gray-900">Blog</a>
-          <a className="mr-5 hover:text-gray-900">Contact</a>
+          <Link href="/" className="mr-5 hover:text-gray-900">
+            Homepage{" "}
+          </Link>
+          <Link href="/courses" className="mr-5 hover:text-gray-900">
+            Courses
+          </Link>
+          <Link href="/mentor" className="mr-5 hover:text-gray-900">
+            Mentor
+          </Link>
+          <Link href="/blog" className="mr-5 hover:text-gray-900">
+            Blog
+          </Link>
+          <Link href="/contact" className="mr-5 hover:text-gray-900">
+            Contact
+          </Link>
         </nav>
         <div className="flex">
           {!session ? (
