@@ -12,7 +12,7 @@ export default function Home() {
       <LandingPage />
       <div>
         <span className="flex text-xl font-extrabold">Khóa học</span>
-        <CardCourse />
+        <CardCourse searchTerm={""} />
         <div className="flex items-center flex-wrap ">
           <Link
             className=" text-blue-500 hover:text-blue-800 inline-flex items-center md:mb-2 lg:mb-0 mr-3 lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 "
@@ -36,7 +36,7 @@ export default function Home() {
       </div>
       <div>
         <span className="flex text-xl font-extrabold">Bài viết mới nhất</span>
-        <CardCourse />
+        <CardCourse searchTerm={""} />
         <div className="flex items-center flex-wrap ">
           <Link
             className=" text-blue-500 hover:text-blue-800 inline-flex items-center md:mb-2 lg:mb-0 mr-3 lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 "

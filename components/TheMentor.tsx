@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function TheMentor() {
   return (
     <>
@@ -17,7 +19,7 @@ export default function TheMentor() {
           <div className="flex flex-wrap -m-4">
             <div className="p-4 lg:w-1/4 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
-                <img
+                <Image
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-top mb-4 "
                   src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-1.jpg"
@@ -78,7 +80,7 @@ export default function TheMentor() {
 
             <div className="p-4 lg:w-1/4 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
-                <img
+                <Image
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
                   src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-2.jpg"
@@ -138,7 +140,7 @@ export default function TheMentor() {
             </div>
             <div className="p-4 lg:w-1/4 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
-                <img
+                <Image
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
                   src="https://cdn.rareblocks.xyz/collection/celebration/images/team/6/team-member-3.jpg"
@@ -198,7 +200,7 @@ export default function TheMentor() {
             </div>
             <div className="p-4 lg:w-1/4 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
-                <img
+                <Image
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
                   src="https://cdn.rareblocks.xyz/collection/celebration/images/team/2/business-man.jpg"

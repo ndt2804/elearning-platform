@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function TheReview() {
   return (
     <>
@@ -24,7 +26,7 @@ export default function TheReview() {
                   become a programmer at FPT
                 </p>
                 <a className="inline-flex items-center">
-                  <img
+                  <Image
                     alt="testimonial"
                     src="https://dummyimage.com/106x106"
                     className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
@@ -56,7 +58,7 @@ export default function TheReview() {
                   programmer in the future!
                 </p>
                 <a className="inline-flex items-center">
-                  <img
+                  <Image
                     alt="testimonial"
                     src="https://dummyimage.com/107x107"
                     className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
