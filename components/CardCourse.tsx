@@ -1,6 +1,7 @@
 "use client";
 import { Card } from "antd";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface Course {
   _id: string;
@@ -8,6 +9,7 @@ interface Course {
   description: string;
   imageUrl: string;
   price: number;
+  slug: string;
 }
 
 interface Props {
@@ -40,8 +42,6 @@ const CardCourse: React.FC<Props> = ({ searchTerm }) => {
     fetchCourses();
   }, []);
 
-  const { Meta } = Card;
-
   const filteredCourses = courses.filter((course) =>
     course.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -57,7 +57,7 @@ const CardCourse: React.FC<Props> = ({ searchTerm }) => {
             cover={<img alt="example" src={course.imageUrl} />}
           >
             <div className="flex text-xl font-extrabold justify-between items-center ">
-              <a>{course.title}</a>
+              <Link href={`/courses/${course.slug}`}>{course.title}</Link>
               <span>{course.price}</span>
             </div>
           </Card>
