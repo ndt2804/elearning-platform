@@ -20,26 +20,11 @@ const CardCourse: React.FC<Props> = ({ searchTerm }) => {
   const [courses, setCourses] = useState<Course[]>([]);
 
   useEffect(() => {
-    const fetchCourses = async () => {
-      try {
-        const response = await fetch("/api/course");
-        if (response.ok) {
-          const data = await response.json();
-
-          if (data && Array.isArray(data)) {
-            setCourses(data);
-          } else {
-            console.error("Dữ liệu không hợp lệ hoặc không tồn tại.");
-          }
-        } else {
-          throw new Error("Failed to fetch courses");
-        }
-      } catch (error) {
-        console.error("Error fetching courses:", error);
-      }
-    };
-
-    fetchCourses();
+    fetch(`/api/course`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCourses(data);
+      });
   }, []);
 
   const filteredCourses = courses.filter((course) =>

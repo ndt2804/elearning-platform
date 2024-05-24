@@ -1,12 +1,12 @@
 import Course from "@/types/course";
 import slugify from "slugify";
-
 import { NextResponse, NextRequest } from "next/server";
 import { connectMongoDB } from "@/libs/mongodb";
 
 export const POST = async (request: any) => {
-  const { title, description, imageUrl, price } = await request.json();
   await connectMongoDB();
+
+  const { title, description, imageUrl, price } = await request.json();
   const slug = slugify(title, { lower: true, locale: "vi" });
   console.log(slug);
   const newCourse = new Course({
@@ -28,6 +28,7 @@ export const POST = async (request: any) => {
     });
   }
 };
+
 export const GET = async (request: any, response: any) => {
   if (request.method === "GET") {
     try {

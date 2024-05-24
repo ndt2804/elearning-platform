@@ -8,7 +8,6 @@ import { useSession } from "next-auth/react";
 import openNotification from "@/components/ui/Notification";
 import { useRouter } from "next/navigation";
 import { Button } from "antd";
-import { PoweroffOutlined } from "@ant-design/icons";
 
 interface Course {
   _id: string;
@@ -46,6 +45,7 @@ function DetailCourse({ params }: { params: { slug: string } }) {
         setLoading(false);
       });
   }, []);
+
   useEffect(() => {
     if (!session || !session.user || !session.user.name) {
       return;

@@ -8,6 +8,8 @@ import {
   CheckCircleTwoTone,
 } from "@ant-design/icons";
 import Loading from "@/components/ui/loading";
+import { useSession } from "next-auth/react";
+import openNotification from "@/components/ui/Notification";
 
 interface Lession {
   _id: string;
@@ -16,12 +18,25 @@ interface Lession {
   price: Number;
   videoUrl: string;
 }
+interface User {
+  _id: string;
+}
+interface UserProgress {
+  _id: string;
+  userId: string;
+  lessonId: string;
+}
 
 export default function DetailLession({
   params,
 }: {
   params: { slug: string };
 }) {
+  const { data: session } = useSession();
+  const [user, setUser] = useState<User | null>(null);
+
+  const [userProgress, setUserProgress] = useState<UserProgress[]>([]);
+
   const [lession, setLession] = useState<Lession[]>([]);
   const [isLoading, setLoading] = useState(true);
   const [videoUrl, setVideoUrl] = useState<string>("F4fbwKV9dBU");
@@ -31,15 +46,20 @@ export default function DetailLession({
   const [lessisonContent, setLessisonContent] = useState<string>(
     "Introducing the website"
   );
+  const [selectedLesson, setSelectedLesson] = useState<string | null>(null);
+  const [isLoadingComplete, setLoadingComplete] = useState(false);
 
+  const [error, setError] = useState("");
   const handlePlay = (
     lessionTitle: string,
     videoUrl: string,
-    lessisonContent: string
+    lessisonContent: string,
+    lessonId: string
   ) => {
     setLessionTitle(lessionTitle);
     setVideoUrl(videoUrl);
     setLessisonContent(lessisonContent);
+    setSelectedLesson(lessonId);
   };
 
   useEffect(() => {
@@ -50,6 +70,76 @@ export default function DetailLession({
         setLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    if (!session || !session.user || !session.user.name) {
+      return;
+    }
+    fetch(`/api/user/${session.user.name}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setUser(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching user:", error);
+      });
+  }, [session]);
+  useEffect(() => {
+    if (user) {
+      fetch(`/api/progress?userID=${user._id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setUserProgress(data);
+        })
+        .catch((error) => {
+          console.error("Error fetching purchases:", error);
+        });
+    }
+  }, [user]);
+
+  const handleCompleted = async () => {
+    setLoadingComplete(true);
+    setTimeout(async () => {
+      try {
+        const res = await fetch("/api/progress", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            lessonId: selectedLesson,
+            userId: user?._id,
+            completed: true,
+          }),
+        });
+        if (res.status === 400) {
+          setLoadingComplete(false);
+
+          setError("Purchase course failed");
+          openNotification(
+            "error",
+            "Completed failed",
+            "Completed failed. You have completed this lesson"
+          );
+        }
+        if (res.status === 200) {
+          setLoadingComplete(false);
+          setError("");
+          openNotification(
+            "success",
+            "Register Success",
+            "Registration successful. You can learning now"
+          );
+          // router.push(`/learning/${course?.slug}`);
+        }
+      } catch (error) {
+        setLoadingComplete(false);
+        setError("Error, try again");
+        console.log(error);
+      }
+    }, 2000);
+  };
+
   if (isLoading) return <Loading />;
   if (!lession) return <p>No profile data</p>;
   return (
@@ -83,7 +173,12 @@ export default function DetailLession({
                 </div>
                 <div className="flex gap-3">
                   <div className="relative">
-                    <Button type="primary" className="mt-4">
+                    <Button
+                      type="primary"
+                      className="mt-4"
+                      loading={isLoadingComplete}
+                      onClick={handleCompleted}
+                    >
                       Mark Complete
                       <CheckCircleOutlined />
                     </Button>
@@ -97,23 +192,50 @@ export default function DetailLession({
                   size="large"
                   bordered
                   dataSource={lession}
-                  renderItem={(lession: any) => (
-                    <List.Item>
-                      <h3>{lession.title}</h3>
-                      <button
-                        onClick={() =>
-                          handlePlay(
-                            lession.title,
-                            lession.videoUrl,
-                            lession.content
-                          )
-                        }
+                  renderItem={(lession: any) => {
+                    const isInProgress = userProgress.some(
+                      (progress: any) => progress.lessonId === lession._id
+                    );
+                    return (
+                      <List.Item
+                        style={{
+                          background:
+                            selectedLesson === lession._id
+                              ? "#f0f0f0"
+                              : "transparent",
+                        }}
                       >
-                        <PlayCircleOutlined />
-                        <CheckCircleTwoTone twoToneColor="#52c41a" />
-                      </button>
-                    </List.Item>
-                  )}
+                        <h3>{lession.title}</h3>
+                        {isInProgress ? (
+                          <button
+                            onClick={() =>
+                              handlePlay(
+                                lession.title,
+                                lession.videoUrl,
+                                lession.content,
+                                lession._id
+                              )
+                            }
+                          >
+                            <CheckCircleTwoTone twoToneColor="#52c41a" />
+                          </button>
+                        ) : (
+                          <button
+                            onClick={() =>
+                              handlePlay(
+                                lession.title,
+                                lession.videoUrl,
+                                lession.content,
+                                lession._id
+                              )
+                            }
+                          >
+                            <PlayCircleOutlined />
+                          </button>
+                        )}
+                      </List.Item>
+                    );
+                  }}
                 />
               </div>
             </div>
