@@ -22,7 +22,7 @@ const CardCourse: React.FC<Props> = ({ searchTerm }) => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/course");
+        const response = await fetch("/api/course");
         if (response.ok) {
           const data = await response.json();
 
