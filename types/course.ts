@@ -1,4 +1,5 @@
 import mongoose, { Schema, models } from "mongoose";
+import Lession from "./lession";
 const courseSchema = new Schema(
   {
     title: {
@@ -19,7 +20,7 @@ const courseSchema = new Schema(
       type: Number,
       required: true,
     },
-    lessionsId: [{ type: Schema.Types.ObjectId, ref: "Lession" }],
+    lessionsId: [{ type: Schema.Types.ObjectId, ref: Lession }],
     slug: {
       type: String,
     },
